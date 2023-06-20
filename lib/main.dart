@@ -2,7 +2,9 @@
 
 import 'package:demo_project/pages/Home_Page.dart';
 import 'package:demo_project/pages/Login_Page.dart';
+import 'package:demo_project/utils/MyRouts.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyDemoApp());
@@ -16,14 +18,17 @@ class MyDemoApp extends StatelessWidget {
     return MaterialApp(
       // ignore: avoid_unnecessary_containers
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.indigo),
+      debugShowCheckedModeBanner: true,
+      theme: ThemeData(
+          primarySwatch: Colors.indigo,
+          fontFamily: GoogleFonts.lato().fontFamily),
       darkTheme:
           ThemeData(brightness: Brightness.light, primarySwatch: Colors.red),
-      initialRoute: "/home",
+      initialRoute: "/login",
       routes: {
         "/": (context) => LoginPage(),
-        "/login": (context) => LoginPage(),
-        "/home": (context) => HomePage()
+        MyRouts.loginRout: (context) => LoginPage(),
+        MyRouts.homeRout: (context) => HomePage()
       },
     );
   }
