@@ -11,6 +11,13 @@ class Products {
       required this.image});
 }
 
-final productArray = [
-  Products(id: "1", desc: "shirt", price: "100", image: "")
-];
+class ProductModel {
+  static final productItem = [
+    Products(
+        id: "1",
+        desc: "shirt",
+        price: "100",
+        image:
+            "https://www.pakainfo.com/wp-content/uploads/2021/09/sample-image-url-for-testing-300x169.jpg")
+  ];
+}
