@@ -3,6 +3,7 @@
 import 'package:demo_project/pages/Home_Page.dart';
 import 'package:demo_project/pages/Login_Page.dart';
 import 'package:demo_project/utils/MyRouts.dart';
+import 'package:demo_project/weidgets/MyThem.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,11 +20,8 @@ class MyDemoApp extends StatelessWidget {
       // ignore: avoid_unnecessary_containers
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          primarySwatch: Colors.indigo,
-          fontFamily: GoogleFonts.lato().fontFamily),
-      darkTheme:
-          ThemeData(brightness: Brightness.light, primarySwatch: Colors.red),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       initialRoute: MyRouts.homeRout,
       routes: {
         //"/": (context) => LoginPage(),
