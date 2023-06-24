@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../modals/product.dart';
 
 class ProductWeidght extends StatelessWidget {
+  
   final Products products;
 
   const ProductWeidght({super.key, required this.products});
